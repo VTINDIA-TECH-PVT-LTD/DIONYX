@@ -5,22 +5,22 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Emily Carter',
-    image: 'https://randomuser.me/api/portraits/women/44.jpg',
+    name: 'Rajesh Biswal',
+    image: 'https://t4.ftcdn.net/jpg/03/67/70/91/360_F_367709147_W4Q2pRjMcz7jUkuH4e1BIhmtCDceu3FH.jpg',
     review:
       'Absolutely amazing stay! The staff were friendly and the rooms were spotless. I would definitely recommend this hotel to my friends.',
     rating: 5,
   },
   {
-    name: 'Michael Singh',
-    image: 'https://randomuser.me/api/portraits/men/35.jpg',
+    name: 'Ramesh Singh',
+    image: 'https://images.unsplash.com/photo-1729157661483-ed21901ed892?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGluZGlhbiUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D',
     review:
       'Fantastic location and the food was excellent. It felt like home away from home. Will be coming back soon!',
     rating: 4,
   },
   {
-    name: 'Sophia Lee',
-    image: 'https://randomuser.me/api/portraits/women/68.jpg',
+    name: 'Sangeeta Sharma',
+    image: 'https://i.pinimg.com/736x/63/f6/39/63f6391faa4c52309bbe8819ff32fa85.jpg',
     review:
       'The spa and wellness area were top-notch. A very relaxing experience. Perfect for a weekend getaway.',
     rating: 5,

@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 const menuItems = [
   { label: 'Home', path: '/' },
-  { label: 'Accommodation', path: '/accommodation' },
+  { label: 'Accommodation', path: '/accommodation'},
   { label: 'About Us', path: '/about' },
   { label: 'Restaurant', path: '/restaurant' },
-  { label: 'Facilities', path: '/facilities', hasMegaMenu: true },
-  { label: 'Gallery', hasMegaMenu: true },
+  { label: 'Facilities', path: '/facilities' },
+  { label: 'Gallery',path: '/gallery' },
   { label: 'Contact Us', path: '/contact' },
 ];
 
