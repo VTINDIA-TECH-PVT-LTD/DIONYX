@@ -20,6 +20,7 @@ import Payment from "./components/Payment";
 import Contact from "./components/Contactus"; 
 import Facilities from "./components/Facilities"; 
 import PreNavbar from "./components/PreNavbar";
+import Gallery from "./pages/Gallery"; // Importing the Gallery component
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
         {/* Contact page */}
         <Route path="/contact" element={<Contact />} />
         <Route path="facilities" element={<Facilities />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </Router>
   );
