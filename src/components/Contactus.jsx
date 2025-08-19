@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import Footer from "../components/Footer";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 const Contact = () => {
   return (
@@ -88,7 +89,7 @@ const Contact = () => {
           {/* Google Map */}
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.6862174010246!2d72.82887401421466!3d18.944200387155486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce1fdfa72891%3A0x808c86fbb25a8139!2sTaj%20Mahal%20Palace!5e0!3m2!1sen!2sin!4v1674827960472!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.088097834721!2d85.84269852797176!3d20.29299557839749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909c6a9e8cc17%3A0x66aa46cf3ceab634!2sHOTEL%20DIONYX!5e0!3m2!1sen!2sin!4v1755584327258!5m2!1sen!2sin"
               width="100%"
               height="250"
               allowFullScreen=""
@@ -99,6 +100,7 @@ const Contact = () => {
         </motion.div>
       </section>
         <Footer />
+        <ScrollToTopButton />
     </div>
   );
 };

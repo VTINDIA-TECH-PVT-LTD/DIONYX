@@ -10,6 +10,7 @@ import {
   FaCar,
 } from "react-icons/fa";
 import Footer from "../components/Footer";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 const facilities = [
   {
@@ -77,6 +78,7 @@ const Facilities = () => {
       </div>
 
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };

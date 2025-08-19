@@ -5,18 +5,18 @@ const foodBanners = [
   {
     title: 'Explore and Enjoy with Hotel Dionyx',
     image:
-      'https://m.ahstatic.com/is/image/accorhotels/met_p_a106-39:3by2?fmt=jpg&op_usm=1.75,0.3,2,0&resMode=sharp2&dpr=on,1.5&qlt=80',
+      'https://dionyx.in/images/about.jpeg',
       
   },
   {
     title: 'Luxury Rooms and Suites',
     image:
-      'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhvdGVsfGVufDB8fDB8fHww',
+      'https://dionyx.in/images/bb1.jpg',
   },
   {
     title: 'Luxury Infrastructure',
     image:
-      'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&auto=format&fit=crop&q=60',
+      'https://dionyx.in/images/ew.jpeg',
   },
 ];
 

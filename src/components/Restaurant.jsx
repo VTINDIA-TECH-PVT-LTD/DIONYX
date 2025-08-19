@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../components/Footer";
 import Mianhome from "../components/Mianhome";
+import { Scroll } from "lucide-react";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 const menuItems = [
   { name: "Signature Seafood Platter", price: "$45" },
@@ -14,12 +16,12 @@ const menuItems = [
 ];
 
 const diningPhotos = [
-  "https://images.unsplash.com/photo-1498654896293-37aacf113fd9",
-  "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
-  "https://images.unsplash.com/photo-1498654896293-37aacf113fd9",
-  "https://images.unsplash.com/photo-1470337458703-46ad1756a187",
-  "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
-  "https://images.unsplash.com/photo-1470337458703-46ad1756a187",
+  "https://dionyx.in/images/act7.jpeg",
+  "https://dionyx.in/images/23.jpeg",
+  "https://dionyx.in/images/1.jpg",
+  "https://dionyx.in/images/24.jpeg",
+  "https://dionyx.in/images/2.jpg",
+  "https://dionyx.in/images/25.jpeg"
 ];
 
 const Restaurant = () => {
@@ -118,6 +120,7 @@ const Restaurant = () => {
 
       {/* Footer */}
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 };
