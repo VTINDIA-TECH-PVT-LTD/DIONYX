@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import Mianhome from "../components/Mianhome";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 const About = () => {
   return (
@@ -44,7 +45,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="https://dionyx.in/images/executive.jpg"
+              src="https://dionyx.in/images/about.jpeg"
               alt="Hotel Lobby"
               className="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-500"
             />
@@ -114,6 +115,7 @@ const About = () => {
 
       {/* Footer */}
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };
