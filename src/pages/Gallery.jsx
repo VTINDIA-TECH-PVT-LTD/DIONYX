@@ -1,21 +1,26 @@
 // src/pages/Gallery.jsx
 import React from "react";
 import Footer from "../components/Footer";
+import { Scroll } from "lucide-react";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const photos = [
-  "https://picsum.photos/id/1018/400/300",
-  "https://picsum.photos/id/1015/400/300",
-  "https://picsum.photos/id/1016/400/300",
-  "https://picsum.photos/id/1016/400/300",
-  "https://picsum.photos/id/1016/400/300",
-  "https://picsum.photos/id/1016/400/300",
+  "https://dionyx.in/images/drone.jpeg",
+  "https://dionyx.in/images/ew.jpeg",
+  "https://dionyx.in/images/2.jpeg",
+  "https://dionyx.in/images/bb1.jpg",
+  "https://dionyx.in/images/3.jpeg",
+  "https://dionyx.in/images/4.jpeg",
+  "https://dionyx.in/images/9.jpeg",
+  "https://dionyx.in/images/new4.jpg",
+  "https://dionyx.in/images/7.jpeg"
 ];
 
 const videos = [
   "https://www.w3schools.com/html/mov_bbb.mp4",
   "https://www.w3schools.com/html/mov_bbb.mp4",
-  "https://www.w3schools.com/html/mov_bbb.mp4",
-  "https://www.w3schools.com/html/mov_bbb.mp4",
+  // "https://www.w3schools.com/html/mov_bbb.mp4",
+  // "https://www.w3schools.com/html/mov_bbb.mp4",
 ];
 
 export default function Gallery() {
@@ -67,6 +72,7 @@ export default function Gallery() {
       </div>
       <div className="mt-16">
         <Footer />
+        <ScrollToTopButton />
       </div>
     </div>
   );

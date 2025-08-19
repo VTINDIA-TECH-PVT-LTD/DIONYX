@@ -21,6 +21,7 @@ import Contact from "./components/Contactus";
 import Facilities from "./components/Facilities"; 
 import PreNavbar from "./components/PreNavbar";
 import Gallery from "./pages/Gallery"; // Importing the Gallery component
+import ScrollToTopButton from "./components/ScrollToTopButton"; // Importing the ScrollToTopButton component
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
               <Footer />
               <WhatsAppButton />
               <CallForReservation />
+              <ScrollToTopButton />
               
             </>
           }

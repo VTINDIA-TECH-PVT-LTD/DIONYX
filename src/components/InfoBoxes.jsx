@@ -5,14 +5,14 @@ import { motion } from 'framer-motion';
 const boxes = [
   {
     title: 'Our Vision',
-    image: 'https://m.ahstatic.com/is/image/accorhotels/met_p_a106-39:3by2?fmt=jpg&op_usm=1.75,0.3,2,0&resMode=sharp2&iccEmbed=true&icc=sRGB&dpr=on,1.5&wid=335&hei=223&qlt=80',
+    image: 'https://dionyx.in/images/23.jpeg',
     content:
       'We aim to deliver the best food experience with quality ingredients and passion.',
     button: 'Learn More',
   },
   {
     title: 'Our Services',
-    image: 'https://m.ahstatic.com/is/image/accorhotels/met_p_a106-39:3by2?fmt=jpg&op_usm=1.75,0.3,2,0&resMode=sharp2&iccEmbed=true&icc=sRGB&dpr=on,1.5&wid=335&hei=223&qlt=80',
+    image: 'https://dionyx.in/images/26.jpg',
     content:
       'From dine-in to doorstep delivery, we serve you wherever you are.',
     button: 'Explore Services',

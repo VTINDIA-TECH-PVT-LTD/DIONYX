@@ -32,10 +32,16 @@ const Footer = () => {
             hospitality in the heart of Odisha.
           </p>
           <div className="flex space-x-4 mt-4">
-            {[Facebook, Instagram, Twitter].map((Icon, i) => (
+            {[
+              { Icon: Facebook, href: "https://www.facebook.com/share/16zJHzBVrC/" },
+              { Icon: Instagram, href: "https://www.instagram.com/hoteldionyx?igsh=cHRudXR2NzlqcnF0" },
+              { Icon: Twitter, href: "https://twitter.com/yourpage" },
+            ].map(({ Icon, href }, i) => (
               <motion.a
                 key={i}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, color: '#f97316' }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
