@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Calendar, Users } from "lucide-react";
 import Uniqueness from "../pages/Uniqueness";
 import Footer from "./Footer";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 const rooms = [
   {
@@ -167,6 +168,7 @@ const Accommodation = () => {
       </section>
       <Uniqueness />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };

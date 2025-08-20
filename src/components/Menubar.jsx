@@ -10,7 +10,7 @@ const menuItems = [
   { label: 'About Us', path: '/about' },
   { label: 'Restaurant', path: '/restaurant' },
   { label: 'Facilities', path: '/facilities' },
-  { label: 'Gallery',path: '/gallery' },
+  { label: 'Gallery',path: '/gallery', hasMegaMenu: true },
   { label: 'Contact Us', path: '/contact' },
 ];
 
