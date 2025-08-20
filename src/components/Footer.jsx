@@ -1,6 +1,7 @@
 // src/components/Footer.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 import {
   Facebook,
   Instagram,
@@ -53,17 +54,27 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            {['Home', 'Accommodation', 'About Us', 'Facilities', 'Gallery', 'Contact Us'].map(
-              (item, idx) => (
-                <li key={idx} className="hover:text-white cursor-pointer">
-                  {item}
-                </li>
-              )
-            )}
-          </ul>
-        </div>
+  <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+  <ul className="space-y-2 text-gray-400 text-sm">
+    {[
+      { label: "Home", path: "/" },
+      { label: "Accommodation", path: "/accommodation" },
+      { label: "About Us", path: "/about" },
+      { label: "Facilities", path: "/facilities" },
+      { label: "Gallery", path: "/gallery" },
+      { label: "Contact Us", path: "/contact" },
+    ].map((item, idx) => (
+      <li key={idx}>
+        <Link
+          to={item.path}
+          className="hover:text-white cursor-pointer transition"
+        >
+          {item.label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
         {/* Contact Info */}
         <div>

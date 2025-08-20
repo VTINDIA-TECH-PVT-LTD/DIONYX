@@ -1,119 +1,172 @@
 // src/pages/Accommodation.jsx
 import React from "react";
 import { motion } from "framer-motion";
-
-// ✅ import your components
-// import Mianhome from "../components/Mianhome";
-import Footer from "../components/Footer";
-import OurUniqueness from "../pages/OurUniqueness";
-import { Scroll } from "lucide-react";
+import { Calendar, Users } from "lucide-react";
+import Uniqueness from "../pages/Uniqueness";
+import Footer from "./Footer";
 import ScrollToTopButton from "./ScrollToTopButton";
 
-const accommodations = [
+const rooms = [
   {
-    name: "Deluxe Room",
-    description:
-      "Spanning 185 sq. ft., the Deluxe Rooms are delightful smart rooms that offer comfortable accommodations to guests.",
+    title: "Deluxe King Room",
+    description: "Elegant comfort with king-sized bed, balcony, and city views.",
     image:
-      "https://dionyx.in/images/deluxe.jpg",
-    price: " Single 1499/-",
-    price2: " Double 1999/- ",
-    desc:"Free wifi ,Smart TV with OTT channels , Doctors on call , 24/7 room service , Hot and cold water , 24 hours power backup",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+    price: "₹4,999 / night",
   },
-  // {
-  //   name: "Ocean View Suite",
-  //   description:
-  //     "Luxurious suite with a panoramic ocean view, private jacuzzi, and personal butler service.",
-  //   image:
-  //     "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80",
-  //   price: "$350 / night",
-  // },
   {
-    name: "Executive Rooms",
+    title: "Executive Suite",
     description:
-      "The Executive Rooms are comfortable rooms with an approximate area of 289 sq. ft. You can accommodate 3 adults at a time. They are well equipped with modern amenities and designed with bespoke interiors elements.",
+      "Spacious suite with a private lounge, luxury bathroom & modern amenities.",
     image:
-      "https://dionyx.in/images/executive.jpg",
-      price: " Single 2199/-",
-      price2: " Double 2199/- ",
-      desc:"Free wifi ,Smart TV with OTT channels , Doctors on call , 24/7 room service , Hot and cold water , 24 hours power backup,Mini bar,In room tea, coffee maker, Large luxury sofa"
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+    price: "₹7,499 / night",
   },
+  {
+    title: "Family Room",
+    description:
+      "Perfect for families with extra space, cozy beds & warm interiors.",
+    image:
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
+    price: "₹6,299 / night",
+  },
+  
 ];
 
 const Accommodation = () => {
   return (
-    <div className="bg-gradient-to-b from-white to-orange-50">
-      {/* ✅ Show homepage hero */}
-      {/* <Mianhome /> */}
-
-      <div className="py-16 px-6 md:px-12">
-        <motion.h1
-          initial={{ opacity: 0, y: -40 }}
+    <div className="bg-gradient-to-b from-white to-orange-50 min-h-96 overflow-hidden">
+      {/* Hero Section */}
+      <section
+        className="relative h-screen flex items-center justify-center bg-fixed bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1600585154206-f3d3be726f88?w=1600&q=80')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4"
+          transition={{ duration: 1 }}
+          className="relative text-center text-white"
         >
-          Accommodation
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="text-center text-gray-600 max-w-2xl mx-auto mb-12"
+          <h1 className="text-5xl font-bold drop-shadow-lg">
+            Luxury Accommodation
+          </h1>
+          <p className="mt-4 text-lg opacity-90">
+            Experience unmatched comfort & hospitality at Dionyx
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Sticky Booking Widget */}
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="max-w-5xl mx-auto -mt-16 relative z-20 bg-white rounded-2xl shadow-xl p-6 flex flex-col md:flex-row gap-4"
+      >
+        <div className="flex items-center gap-3 flex-1 border rounded-lg p-3">
+          <Calendar className="text-orange-500" />
+          <input
+            type="date"
+            className="w-full outline-none"
+            placeholder="Check-in Date"
+          />
+        </div>
+        <div className="flex items-center gap-3 flex-1 border rounded-lg p-3">
+          <Users className="text-orange-500" />
+          <input
+            type="number"
+            className="w-full outline-none"
+            placeholder="Guests"
+          />
+        </div>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-orange-500 text-white px-6 py-3 rounded-xl shadow-md hover:bg-orange-600 transition-colors"
         >
-          Offering our guests lavish, comfort and amenities, Hotel Dionyx provides two pristine room categories, namely the Deluxe Rooms and the Executive Rooms , to ensure the perfect stay in Bhubaneswar at Saheed Nagar the heart of the city.
+          Check Availability
+        </motion.button>
+      </motion.div>
 
+      {/* Rooms Showcase */}
+      <section className="max-w-7xl mx-auto py-20 px-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-bold text-center mb-16"
+        >
+          Our Rooms & Suites
+        </motion.h2>
 
-        </motion.p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {accommodations.map((room, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {rooms.map((room, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl 
-                       transition-transform transform hover:-translate-y-2 cursor-pointer"
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="relative rounded-2xl overflow-hidden shadow-lg group"
             >
-              <motion.img
-                src={room.image}
-                alt={room.name}
-                className="w-full h-64 object-cover"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.4 }}
-              />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-3">
-                  {room.name}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">{room.description}</p>
-                <span className="text-lg font-bold text-orange-600">
-                  {room.price}
-                  {room.price2 && (
-                    <span className="ml-40">{room.price2}</span>
-                  )}
-                </span>
-                {room.desc && (
-                  <ul className="text-gray-500 mt-2 text-sm text-left list-none">
-                    {room.desc.split(',').map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 mb-1">
-                        <span role="img" aria-label="hand arrow">👉</span> {feature.trim()}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+              {/* Image with zoom hover */}
+              <div className="overflow-hidden h-64">
+                <motion.img
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.6 }}
+                  src={room.image}
+                  alt={room.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Overlay card */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-6 text-white">
+                <h3 className="text-2xl font-semibold">{room.title}</h3>
+                <p className="text-sm mt-2">{room.description}</p>
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-lg font-bold">{room.price}</span>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    className="bg-orange-500 px-4 py-2 rounded-lg shadow-md hover:bg-orange-600"
+                  >
+                    Book Now
+                  </motion.button>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
-        <div className="mt-12">
-        <OurUniqueness  />
-        </div>
-      </div>
+      </section>
 
-      {/* ✅ Footer at bottom */}
+      {/* Call to Action */}
+      <section className="bg-orange-500 text-white py-16 text-center">
+        <motion.h2
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-bold mb-4"
+        >
+          Ready to Experience Luxury?
+        </motion.h2>
+        <p className="opacity-90 mb-6">
+          Book your stay today and make unforgettable memories at Dionyx Hotel.
+        </p>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-white text-orange-600 px-8 py-3 rounded-xl shadow-lg font-semibold"
+        >
+          Reserve Now
+        </motion.button>
+      </section>
+      <Uniqueness />
       <Footer />
       <ScrollToTopButton />
     </div>
