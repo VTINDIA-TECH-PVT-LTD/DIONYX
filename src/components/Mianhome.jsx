@@ -5,18 +5,18 @@ const foodBanners = [
   {
     title: 'Explore and Enjoy with Hotel Dionyx',
     image:
-      'https://dionyx.in/images/about.jpeg',
+      'https://olddionyx.vercel.app/images/about.jpeg',
       
   },
   {
     title: 'Luxury Rooms and Suites',
     image:
-      'https://dionyx.in/images/bb1.jpg',
+      'https://olddionyx.vercel.app/images/bb1.jpg',
   },
   {
     title: 'Luxury Infrastructure',
     image:
-      'https://dionyx.in/images/ew.jpeg',
+      'https://olddionyx.vercel.app/images/ew.jpeg',
   },
 ];
 

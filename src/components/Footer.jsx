@@ -24,7 +24,7 @@ const Footer = () => {
         {/* About Section */}
         <div>
           <img
-            src="https://dionyx.in/images/newlogo1.png"
+            src="https://olddionyx.vercel.app/images/newlogo1.png"
             alt="Hotel Logo"
             className="w-36 mb-4"
           />

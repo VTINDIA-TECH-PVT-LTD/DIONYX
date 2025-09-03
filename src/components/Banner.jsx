@@ -28,7 +28,7 @@ const Banner = () => {
         className="md:w-1/2"
       >
         <img
-          src="https://dionyx.in/images/new.jpeg" // Replace with your image URL or local import
+          src="https://olddionyx.vercel.app/images/new.jpeg" // Replace with your image URL or local import
           alt="Hotel Dionyx"
           className="rounded-lg shadow-lg object-cover w-full max-h-[400px]"
         />

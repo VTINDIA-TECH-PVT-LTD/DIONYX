@@ -22,7 +22,7 @@ const MenuBar = () => {
     <nav className="bg-white/80 shadow-lg px-6 py-4 flex justify-between items-center sticky top-0 left-0 w-full z-50">
       {/* Logo */}
       <div className="flex items-center space-x-4">
-        <img src="https://dionyx.in/images/newlogo1.png" alt="Logo" className="h-15" />
+        <img src="https://olddionyx.vercel.app/images/newlogo1.png" alt="Logo" className="h-15" />
       </div>
 
       {/* Desktop Menu */}
