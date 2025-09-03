@@ -5,14 +5,14 @@ import { motion } from 'framer-motion';
 const boxes = [
   {
     title: 'Our Vision',
-    image: 'https://dionyx.in/images/23.jpeg',
+    image: 'https://olddionyx.vercel.app/images/23.jpeg',
     content:
       'We aim to deliver the best food experience with quality ingredients and passion.',
     button: 'Learn More',
   },
   {
     title: 'Our Services',
-    image: 'https://dionyx.in/images/26.jpg',
+    image: 'https://olddionyx.vercel.app/images/26.jpg',
     content:
       'From dine-in to doorstep delivery, we serve you wherever you are.',
     button: 'Explore Services',

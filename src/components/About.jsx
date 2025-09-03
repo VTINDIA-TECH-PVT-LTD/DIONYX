@@ -45,7 +45,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="https://dionyx.in/images/about.jpeg"
+              src="https://olddionyx.vercel.app/images/about.jpeg"
               alt="Hotel Lobby"
               className="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-500"
             />

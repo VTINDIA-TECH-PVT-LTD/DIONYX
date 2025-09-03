@@ -16,12 +16,12 @@ const menuItems = [
 ];
 
 const diningPhotos = [
-  "https://dionyx.in/images/act7.jpeg",
-  "https://dionyx.in/images/23.jpeg",
-  "https://dionyx.in/images/1.jpg",
-  "https://dionyx.in/images/24.jpeg",
-  "https://dionyx.in/images/2.jpg",
-  "https://dionyx.in/images/25.jpeg"
+  "https://olddionyx.vercel.app/images/act7.jpeg",
+  "https://olddionyx.vercel.app/images/23.jpeg",
+  "https://olddionyx.vercel.app/images/1.jpg",
+  "https://olddionyx.vercel.app/images/24.jpeg",
+  "https://olddionyx.vercel.app/images/2.jpg",
+  "https://olddionyx.vercel.app/images/25.jpeg"
 ];
 
 const Restaurant = () => {

@@ -5,15 +5,15 @@ import { FaExpand, FaTimes } from "react-icons/fa"; // ✅ icons from react-icon
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const photos = [
-  "https://dionyx.in/images/drone.jpeg",
-  "https://dionyx.in/images/ew.jpeg",
-  "https://dionyx.in/images/2.jpeg",
-  "https://dionyx.in/images/bb1.jpg",
-  "https://dionyx.in/images/3.jpeg",
-  "https://dionyx.in/images/4.jpeg",
-  "https://dionyx.in/images/9.jpeg",
-  "https://dionyx.in/images/new4.jpg",
-  "https://dionyx.in/images/7.jpeg",
+  "https://olddionyx.vercel.app/images/drone.jpeg",
+  "https://olddionyx.vercel.app/images/ew.jpeg",
+  "https://olddionyx.vercel.app/images/2.jpeg",
+  "https://olddionyx.vercel.app/images/bb1.jpg",
+  "https://olddionyx.vercel.app/images/3.jpeg",
+  "https://olddionyx.vercel.app/images/4.jpeg",
+  "https://olddionyx.vercel.app/images/9.jpeg",
+  "https://olddionyx.vercel.app/images/new4.jpg",
+  "https://olddionyx.vercel.app/images/7.jpeg",
 ];
 
 const videos = [

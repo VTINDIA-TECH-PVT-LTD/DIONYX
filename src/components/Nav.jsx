@@ -8,7 +8,7 @@ function Nav() {
       <nav className="bg-orange-600 text-white w-full  z-50">
         <div className="container mx-auto flex items-center justify-between space-x-4 py-3 px-4">
           <div>
-          {/* <img src="https://dionyx.in/images/newlogo1.png" alt="" /> */}
+          {/* <img src="https://olddionyx.vercel.app/images/newlogo1.png" alt="" /> */}
           </div>
           <div className="flex space-x-4">
             <div className="flex items-center ">
