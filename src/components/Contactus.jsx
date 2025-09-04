@@ -99,7 +99,7 @@ const Contact = () => {
           </div>
         </motion.div>
       </section>
-        <Footer />
+        
         <ScrollToTopButton />
     </div>
   );

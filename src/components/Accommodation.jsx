@@ -12,7 +12,7 @@ const rooms = [
     description: "Elegant comfort with king-sized bed, balcony, and city views.",
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
-    price: "₹4,999 / night",
+    price: "₹1,999 / night",
   },
   {
     title: "Executive Suite",
@@ -20,7 +20,7 @@ const rooms = [
       "Spacious suite with a private lounge, luxury bathroom & modern amenities.",
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
-    price: "₹7,499 / night",
+    price: "₹2,499 / night",
   },
   {
     title: "Family Room",
@@ -28,7 +28,7 @@ const rooms = [
       "Perfect for families with extra space, cozy beds & warm interiors.",
     image:
       "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
-    price: "₹6,299 / night",
+    price: "₹3,299 / night",
   },
   
 ];
@@ -38,30 +38,31 @@ const Accommodation = () => {
     <div className="bg-gradient-to-b from-white to-orange-50 min-h-96 overflow-hidden">
       {/* Hero Section */}
       <section
-        className="relative h-screen flex items-center justify-center bg-fixed bg-cover bg-center"
+        className="relative h-[30vh] flex items-center justify-center bg-fixed bg-cover bg-center"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1600585154206-f3d3be726f88?w=1600&q=80')",
         }}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0  bg-orange-100" />
+        
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="relative text-center text-white"
         >
-          <h1 className="text-5xl font-bold drop-shadow-lg">
+          <h1 className="text-5xl font-bold drop-shadow-lg text-orange-800">
             Luxury Accommodation
           </h1>
-          <p className="mt-4 text-lg opacity-90">
+          <p className="mt-4 text-lg opacity-90 text-orange-800">
             Experience unmatched comfort & hospitality at Dionyx
           </p>
         </motion.div>
       </section>
 
       {/* Sticky Booking Widget */}
-      <motion.div
+      {/* <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -91,7 +92,7 @@ const Accommodation = () => {
         >
           Check Availability
         </motion.button>
-      </motion.div>
+      </motion.div> */}
 
       {/* Rooms Showcase */}
       <section className="max-w-7xl mx-auto py-20 px-6">
@@ -158,16 +159,16 @@ const Accommodation = () => {
         <p className="opacity-90 mb-6">
           Book your stay today and make unforgettable memories at Dionyx Hotel.
         </p>
-        <motion.button
+        {/* <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           className="bg-white text-orange-600 px-8 py-3 rounded-xl shadow-lg font-semibold"
         >
           Reserve Now
-        </motion.button>
+        </motion.button> */}
       </section>
       <Uniqueness />
-      <Footer />
+      {/* <Footer /> */}
       <ScrollToTopButton />
     </div>
   );

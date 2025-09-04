@@ -9,7 +9,17 @@ const About = () => {
   return (
     <div className="bg-gradient-to-b from-white to-orange-50">
       {/* Top hero/banner */}
-      <Mianhome />
+      {/* <Mianhome /> */}
+      <section className="text-center py-16 bg-orange-100">
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-orange-800"
+        >
+          About Hotel Dionyx
+        </motion.h1>
+      </section>
 
       {/* About Section */}
       <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
@@ -20,7 +30,7 @@ const About = () => {
           transition={{ duration: 0.7 }}
           className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-6"
         >
-          About <span className="text-orange-600">Hotel Dionyx</span>
+          {/* About <span className="text-orange-600">Hotel Dionyx</span> */}
         </motion.h1>
 
         {/* Intro Text */}
@@ -113,8 +123,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer />
+      
       <ScrollToTopButton />
     </div>
   );

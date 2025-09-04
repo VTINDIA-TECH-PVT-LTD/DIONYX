@@ -30,7 +30,7 @@ const Restaurant = () => {
   return (
     <>
       {/* Optional hero/banner */}
-      <Mianhome />
+      {/* <Mianhome /> */}
 
       {/* Restaurant Intro Section */}
       <div className="bg-gradient-to-b from-white to-orange-50 py-16 px-6 md:px-12">
@@ -118,8 +118,7 @@ const Restaurant = () => {
         </AnimatePresence>
       </div>
 
-      {/* Footer */}
-      <Footer />
+      
       <ScrollToTopButton />
     </>
   );

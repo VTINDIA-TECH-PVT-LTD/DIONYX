@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import { FaExpand, FaTimes } from "react-icons/fa"; // ✅ icons from react-icons
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const photos = [
   "https://olddionyx.vercel.app/images/drone.jpeg",
@@ -16,17 +18,32 @@ const photos = [
   "https://olddionyx.vercel.app/images/7.jpeg",
 ];
 
-const videos = [
-  "https://www.w3schools.com/html/mov_bbb.mp4",
-  "https://www.w3schools.com/html/mov_bbb.mp4",
-];
+// const videos = [
+//   "https://www.w3schools.com/html/mov_bbb.mp4",
+//   "https://www.w3schools.com/html/mov_bbb.mp4",
+// ];
 
 export default function Gallery() {
   const [fullscreenImg, setFullscreenImg] = useState(null);
 
   return (
-    <div className="p-8 bg-gradient-to-b from-white to-orange-50 min-h-screen">
-      <h1 className="text-4xl font-bold text-center mb-8">Gallery</h1>
+    <>
+    
+    <div className=" bg-gradient-to-b from-white to-orange-50 min-h-screen">
+      
+      {/* <h1 className="text-4xl font-bold text-center mb-8">Gallery</h1> */}
+      <section className="text-center py-16 bg-orange-100">
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-orange-800"
+        >
+          Our Image Gallery
+        </motion.h1>
+        
+      </section>
+      
 
       {/* Photos */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-20">
@@ -34,10 +51,13 @@ export default function Gallery() {
           let desc = "";
           if (i === 0) desc = "Our Lounge Area";
           else if (i === 1) desc = "Our Dining Area";
-          else if (i === 2) desc = "Our Swimming Pool";
+          else if (i === 2) desc = "Beautiful Pathway";
           else if (i === 3) desc = "Our Garden Area";
           else if (i === 4) desc = "Beautiful Pathway";
-          else if (i === 5) desc = "Cozy Corners";
+          else if (i === 5) desc = "Beautiful Pathway";
+          else if (i === 6) desc = "Beautiful Pathway";
+          else if (i === 7) desc = "Beautiful Pathway";
+          else if (i === 8) desc = "Beautiful Pathway";
 
           return (
             <div
@@ -80,14 +100,14 @@ export default function Gallery() {
       </div>
 
       {/* Videos */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {videos.map((src, i) => (
           <video key={i} controls className="rounded-2xl shadow-md w-full">
             <source src={src} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         ))}
-      </div>
+      </div> */}
 
       {/* Fullscreen Modal */}
       {fullscreenImg && (
@@ -105,11 +125,12 @@ export default function Gallery() {
           />
         </div>
       )}
+      
 
-      <div className="mt-16">
-        <Footer />
+      {/* <div className="mt-16"> */}
         <ScrollToTopButton />
-      </div>
+      {/* </div> */}
     </div>
+    </>
   );
 }

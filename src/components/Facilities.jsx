@@ -47,19 +47,30 @@ const facilities = [
 
 const Facilities = () => {
   return (
-    <div className="bg-gradient-to-b from-white to-orange-50 min-h-screen py-16 px-6 md:px-16">
+    <div className="bg-gradient-to-b from-white to-orange-50   ">
       {/* Page Title */}
-      <motion.h2
+      <section className="text-center py-16 bg-orange-100">
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-orange-800"
+        >
+          Our Facilities
+        </motion.h1>
+        
+      </section>
+      {/* <motion.h2
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-3xl md:text-4xl font-bold text-center text-orange-800 mb-12"
       >
         Our Facilities
-      </motion.h2>
+      </motion.h2> */}
 
       {/* Facilities Grid */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mb-20">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mb-20 pt-5 ">
         {facilities.map((facility, index) => (
           <motion.div
             key={index}
@@ -77,8 +88,8 @@ const Facilities = () => {
         ))}
       </div>
 
-      <Footer />
-      <ScrollToTopButton />
+      {/* <Footer /> */}
+      {/* <ScrollToTopButton /> */}
     </div>
   );
 };
