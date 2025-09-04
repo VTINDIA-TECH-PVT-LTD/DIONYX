@@ -20,8 +20,9 @@ import Payment from "./components/Payment";
 import Contact from "./components/Contactus"; 
 import Facilities from "./components/Facilities"; 
 import PreNavbar from "./components/PreNavbar";
-import Gallery from "./pages/Gallery"; // Importing the Gallery component
-import ScrollToTopButton from "./components/ScrollToTopButton"; // Importing the ScrollToTopButton component
+import Gallery from "./pages/Gallery"; 
+import ScrollToTopButton from "./components/ScrollToTopButton"; 
+import VideoSection from "./pages/VideoSection";
 
 function App() {
   return (
@@ -42,10 +43,9 @@ function App() {
               <TrendingOffers />
               <TestimonialBanner />
               <Testimonials />
-              <Footer />
               <WhatsAppButton />
               <CallForReservation />
-              <ScrollToTopButton />
+              {/* <ScrollToTopButton /> */}
               
             </>
           }
@@ -62,7 +62,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="facilities" element={<Facilities />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/video" element={<VideoSection />} />
       </Routes>
+      <Footer />
+      <ScrollToTopButton />
     </Router>
   );
 }

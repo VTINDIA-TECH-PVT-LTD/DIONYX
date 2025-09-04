@@ -8,24 +8,24 @@ const rooms = [
   {
     title: "Deluxe King Room",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTco9IYH6iaB9WSq_KJVu7yE9Tb2eKsM7944CL5yj2PcXPlS_0kiUVxuJ1dDOavW4ThjLY&usqp=CAU",
-    price: "$129/night",
+      "https://olddionyx.vercel.app/images/new4.jpg",
+    price: "2000/night",
     description:
       "Spacious room with a king-sized bed, private balcony, and city view.",
   },
   {
     title: "Executive Suite",
     image:
-      "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0",
-    price: "$199/night",
+      "https://olddionyx.vercel.app/images/new4.jpg",
+    price: "2999/night",
     description:
       "Premium suite with separate living area, minibar, and 24/7 room service.",
   },
   {
     title: "Standard Twin Room",
     image:
-      "https://media.istockphoto.com/id/1222623844/photo/master-bedroom-in-new-luxury-home-with-chandelier-and-large-bank-of-windows-with-view-of-trees.jpg?s=612x612",
-    price: "$89/night",
+      "https://olddionyx.vercel.app/images/new4.jpg",
+    price: "3500/night",
     description:
       "Comfortable room with two single beds, ideal for friends or colleagues.",
   },

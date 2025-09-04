@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppButton() {
   // WhatsApp link with pre-filled message
-  const phoneNumber = "919861340691"; // Replace with Hotel Dionyx's WhatsApp number
+  const phoneNumber = "919861006356"; // Replace with Hotel Dionyx's WhatsApp number
   const message = "Hii Welcome to Hotel Dionyx";
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
