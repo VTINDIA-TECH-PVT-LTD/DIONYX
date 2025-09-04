@@ -15,10 +15,11 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-bold text-orange-800"
+           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Contact Hotel Dionyx
         </motion.h1>
-        <p className="text-gray-600 mt-4 text-lg">
+        <p className="text-gray-600 mt-4 text-lg" style={{ fontFamily: "'Poppins', sans-serif" }}>
           We’re here to help you 24/7. Reach out to us anytime!
         </p>
       </section>

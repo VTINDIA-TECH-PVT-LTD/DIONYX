@@ -7,12 +7,12 @@ import { Scroll } from "lucide-react";
 import ScrollToTopButton from "./ScrollToTopButton";
 
 const menuItems = [
-  { name: "Signature Seafood Platter", price: "$45" },
-  { name: "Gourmet Steak", price: "$55" },
-  { name: "Exotic Fruit Dessert", price: "$15" },
-  { name: "Italian Pasta Alfredo", price: "$25" },
-  { name: "Spicy Thai Curry", price: "$22" },
-  { name: "Fresh Garden Salad", price: "$12" },
+  { name: "Signature Seafood Platter", price: "145" },
+  { name: "Gourmet Steak", price: "155" },
+  { name: "Exotic Fruit Dessert", price: "115" },
+  { name: "Italian Pasta Alfredo", price: "125" },
+  { name: "Spicy Thai Curry", price: "122" },
+  { name: "Fresh Garden Salad", price: "112" },
 ];
 
 const diningPhotos = [
@@ -21,7 +21,7 @@ const diningPhotos = [
   "https://olddionyx.vercel.app/images/1.jpg",
   "https://olddionyx.vercel.app/images/24.jpeg",
   "https://olddionyx.vercel.app/images/2.jpg",
-  "https://olddionyx.vercel.app/images/25.jpeg"
+  "https://olddionyx.vercel.app/images/25.jpeg",
 ];
 
 const Restaurant = () => {
@@ -33,27 +33,28 @@ const Restaurant = () => {
       {/* <Mianhome /> */}
 
       {/* Restaurant Intro Section */}
-      <div className="bg-gradient-to-b from-white to-orange-50 py-16 px-6 md:px-12">
-        <motion.h1
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4"
-        >
-          Hotel Dionyx Restaurant
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="text-center text-gray-600 max-w-2xl mx-auto mb-8"
-        >
-          Enjoy world-class dining with dishes crafted from the freshest
-          ingredients, blending tradition with culinary artistry.
-        </motion.p>
+      <div className="bg-gradient-to-b from-white to-orange-50  ">
+        <section className="text-center py-16 bg-orange-100">
+          <motion.h1
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-orange-800"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Hotel Dionyx Restaurant
+          </motion.h1>
+          <p
+            className="text-gray-600 mt-4 text-lg"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
+            Enjoy world-class dining with dishes crafted from the freshest
+            ingredients, blending tradition with culinary artistry.
+          </p>
+        </section>
 
         {/* Dining Photos Grid */}
+        
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -118,7 +119,6 @@ const Restaurant = () => {
         </AnimatePresence>
       </div>
 
-      
       <ScrollToTopButton />
     </>
   );

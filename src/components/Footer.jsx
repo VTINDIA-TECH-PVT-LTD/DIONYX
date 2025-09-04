@@ -1,6 +1,6 @@
 // src/components/Footer.jsx
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   Facebook,
@@ -9,7 +9,7 @@ import {
   Mail,
   Phone,
   MapPin,
-} from 'lucide-react';
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="bg-gray-900 text-white py-12 px-6 md:px-16"
+      className="bg-gray-900 text-white py-5 px-6 md:px-10"
     >
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* About Section */}
@@ -34,8 +34,14 @@ const Footer = () => {
           </p>
           <div className="flex space-x-4 mt-4">
             {[
-              { Icon: Facebook, href: "https://www.facebook.com/share/16zJHzBVrC/" },
-              { Icon: Instagram, href: "https://www.instagram.com/hoteldionyx?igsh=cHRudXR2NzlqcnF0" },
+              {
+                Icon: Facebook,
+                href: "https://www.facebook.com/share/16zJHzBVrC/",
+              },
+              {
+                Icon: Instagram,
+                href: "https://www.instagram.com/hoteldionyx?igsh=cHRudXR2NzlqcnF0",
+              },
               { Icon: Twitter, href: "https://twitter.com/yourpage" },
             ].map(({ Icon, href }, i) => (
               <motion.a
@@ -43,8 +49,8 @@ const Footer = () => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, color: '#f97316' }}
-                transition={{ type: 'spring', stiffness: 300 }}
+                whileHover={{ scale: 1.2, color: "#f97316" }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 <Icon className="text-white hover:text-orange-500" size={20} />
               </motion.a>
@@ -54,27 +60,27 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-  <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
-  <ul className="space-y-2 text-gray-400 text-sm">
-    {[
-      { label: "Home", path: "/" },
-      { label: "Accommodation", path: "/accommodation" },
-      { label: "About Us", path: "/about" },
-      { label: "Facilities", path: "/facilities" },
-      { label: "Gallery", path: "/gallery" },
-      { label: "Contact Us", path: "/contact" },
-    ].map((item, idx) => (
-      <li key={idx}>
-        <Link
-          to={item.path}
-          className="hover:text-white cursor-pointer transition"
-        >
-          {item.label}
-        </Link>
-      </li>
-    ))}
-  </ul>
-</div>
+          <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+          <ul className="space-y-2 text-gray-400 text-sm">
+            {[
+              { label: "Home", path: "/" },
+              { label: "Accommodation", path: "/accommodation" },
+              { label: "About Us", path: "/about" },
+              { label: "Facilities", path: "/facilities" },
+              { label: "Gallery", path: "/video" },
+              { label: "Contact Us", path: "/contact" },
+            ].map((item, idx) => (
+              <li key={idx}>
+                <Link
+                  to={item.path}
+                  className="hover:text-white cursor-pointer transition"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         {/* Contact Info */}
         <div>
@@ -119,7 +125,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
+      <div className="border-t border-gray-800 mt-5 pt-4 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} Hotel Dionyx. All rights reserved.
       </div>
     </motion.footer>

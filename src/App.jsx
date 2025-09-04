@@ -61,7 +61,7 @@ function App() {
         {/* Contact page */}
         <Route path="/contact" element={<Contact />} />
         <Route path="facilities" element={<Facilities />} />
-        <Route path="/gallery" element={<Gallery />} />
+        {/* <Route path="/gallery" element={<Gallery />} /> */}
         <Route path="/video" element={<VideoSection />} />
       </Routes>
       <Footer />

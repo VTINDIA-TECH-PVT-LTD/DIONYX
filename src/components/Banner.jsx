@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Banner = () => {
   return (
-    <div className="bg-gray-50 py-12 px-6 md:px-16 flex flex-col md:flex-row items-center gap-8 max-w-7xl mx-auto">
+    <div className="bg-gray-50 py-12 px-6 flex flex-col md:flex-row items-center gap-8 max-w-8xl mx-auto">
       {/* Text Section */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
