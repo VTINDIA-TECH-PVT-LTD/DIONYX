@@ -49,7 +49,7 @@ const Facilities = () => {
   return (
     <div className="bg-gradient-to-b from-white to-orange-50   ">
       {/* Page Title */}
-      <section className="text-center py-16 bg-orange-100">
+      <section className="text-center py-16 ">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,14 +71,14 @@ const Facilities = () => {
       </motion.h2> */}
 
       {/* Facilities Grid */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mb-20 pt-5 ">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10  pt-5 ">
         {facilities.map((facility, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-white shadow-lg rounded-2xl p-6 text-center hover:shadow-2xl transition"
+            className=" shadow-lg rounded-2xl p-6 text-center hover:shadow-2xl transition"
           >
             <div className="flex justify-center mb-4">{facility.icon}</div>
             <h3 className="text-xl font-semibold text-orange-700 mb-2">

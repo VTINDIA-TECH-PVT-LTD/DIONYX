@@ -33,7 +33,7 @@ const Restaurant = () => {
       {/* <Mianhome /> */}
 
       {/* Restaurant Intro Section */}
-      <div className="bg-gradient-to-b from-white to-orange-50  ">
+      <div className="bg-gradient-to-b from-white to-orange-50 pb-5 ">
         <section className="text-center py-16 bg-orange-100">
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
@@ -54,7 +54,7 @@ const Restaurant = () => {
         </section>
 
         {/* Dining Photos Grid */}
-        
+        <div className="py-12 px-6 md:px-12 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -73,6 +73,7 @@ const Restaurant = () => {
             />
           ))}
         </motion.div>
+        </div>
 
         {/* Menu Button */}
         <div className="flex justify-center">
