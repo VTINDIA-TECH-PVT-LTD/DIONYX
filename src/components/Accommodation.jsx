@@ -51,11 +51,12 @@ const Accommodation = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="relative text-center text-white"
+          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           <h1 className="text-5xl font-bold drop-shadow-lg text-orange-800">
             Luxury Accommodation
           </h1>
-          <p className="mt-4 text-lg opacity-90 text-orange-800">
+          <p className="mt-4 text-lg opacity-90 text-gray-600 " style={{ fontFamily: "'Poppins', sans-serif" }}>
             Experience unmatched comfort & hospitality at Dionyx
           </p>
         </motion.div>

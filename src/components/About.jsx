@@ -16,6 +16,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-bold text-orange-800"
+          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           About Hotel Dionyx
         </motion.h1>

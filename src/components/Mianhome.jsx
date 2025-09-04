@@ -1,127 +1,80 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-const foodBanners = [
-  {
-    title: 'Explore and Enjoy with Hotel Dionyx',
-    image:
-      'https://olddionyx.vercel.app/images/about.jpeg',
-      
-  },
-  {
-    title: 'Luxury Rooms and Suites',
-    image:
-      'https://olddionyx.vercel.app/images/bb1.jpg',
-  },
-  {
-    title: 'Luxury Infrastructure',
-    image:
-      'https://olddionyx.vercel.app/images/ew.jpeg',
-  },
-];
+// src/components/Mianhome.jsx
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function Mianhome() {
-  const SLIDE_COUNT = foodBanners.length;
-  const AUTO_PLAY_MS = 3000;
-  const [index, setIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const autoplayRef = useRef(null);
+  const audioRef = useRef(null);
 
-  // autoplay
+  // ✅ Autoplay muted first (so browser doesn’t block it)
   useEffect(() => {
-    if (isPaused) return;
-    autoplayRef.current = setInterval(() => {
-      setIndex((prev) => (prev + 1) % SLIDE_COUNT);
-    }, AUTO_PLAY_MS);
-    return () => clearInterval(autoplayRef.current);
-  }, [isPaused]);
-
-  // keyboard nav
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === 'ArrowRight') setIndex((prev) => (prev + 1) % SLIDE_COUNT);
-      if (e.key === 'ArrowLeft') setIndex((prev) => (prev - 1 + SLIDE_COUNT) % SLIDE_COUNT);
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.loop = true;
+    audio.muted = true;
+    audio.play().catch(() => {});
   }, []);
 
-  const goTo = (i) => setIndex(i % SLIDE_COUNT);
+  // ✅ On first user interaction → unmute & continue playing
+  useEffect(() => {
+    const enableSound = async () => {
+      const audio = audioRef.current;
+      if (!audio) return;
+      audio.muted = false;
+      try {
+        await audio.play();
+      } catch (err) {
+        console.warn("Autoplay still blocked", err);
+      }
+      document.removeEventListener("click", enableSound);
+      document.removeEventListener("touchstart", enableSound);
+    };
+
+    document.addEventListener("click", enableSound);
+    document.addEventListener("touchstart", enableSound);
+
+    return () => {
+      document.removeEventListener("click", enableSound);
+      document.removeEventListener("touchstart", enableSound);
+    };
+  }, []);
 
   return (
-    <div className="relative w-full overflow-hidden">
-      {/* Slider */}
+    <div className="relative w-full h-[70vh] overflow-hidden">
+      {/* 🎵 Background Music */}
+      <audio ref={audioRef} src="/assets/dionyx-bg.mp3" preload="auto" />
+
+      {/* 🎥 MP4 Video as Banner */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="https://dionyx.in/images/Hotel%20Dionxy.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+
+      {/* Overlay gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
+      {/* Title Text */}
       <motion.div
-        className="flex"
-        style={{ width: `${SLIDE_COUNT * 100}vw`, height: 500 }}
-        animate={{ x: `-${index * 100}vw` }}
-        transition={{ type: 'spring', stiffness: 120, damping: 24 }}
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        drag="x"
-        onDragStart={() => setIsPaused(true)}
-        onDragEnd={(event, info) => {
-          const threshold = 80;
-          if (info.offset.x < -threshold) setIndex((prev) => (prev + 1) % SLIDE_COUNT);
-          else if (info.offset.x > threshold) setIndex((prev) => (prev - 1 + SLIDE_COUNT) % SLIDE_COUNT);
-          setIsPaused(false);
-        }}
+        className="absolute bottom-10 left-6 text-white text-3xl font-bold"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
       >
-        {foodBanners.map((item, i) => (
-          <div
-            key={i}
-            className="w-screen h-[500px] relative flex items-center justify-center flex-shrink-0 border-r-2 border-white/20"
-          >
-            {/* Image with zoom effect */}
-            <motion.img
-              key={item.image}
-              src={item.image}
-              alt={item.title}
-              className="w-full h-full object-cover"
-              initial={{ scale: 1.05 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 1.5 }}
-            />
-
-            {/* Dark gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-
-            {/* Trending Tag */}
-            {/* <div className="absolute top-6 left-6 bg-red-600 text-white px-3 py-1 text-sm font-semibold rounded-full shadow-lg">
-              Trending
-            </div> */}
-
-            {/* Animated Title */}
-            <AnimatePresence mode="wait">
-              {index === i && (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -30 }}
-                  transition={{ duration: 0.6 }}
-                  className="absolute bottom-10 left-6 text-white text-2xl md:text-4xl font-extrabold max-w-[90%] leading-snug drop-shadow-lg"
-                >
-                  {item.title}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        ))}
+        Explore and Enjoy with Hotel Dionyx
       </motion.div>
 
-      {/* Dots */}
-      <div className="absolute left-0 right-0 bottom-6 flex justify-center items-center gap-3">
-        {foodBanners.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => goTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`w-3 h-3 rounded-full focus:outline-none transform transition-all duration-300 ${
-              i === index ? 'bg-white scale-125' : 'bg-white/40'
-            }`}
-          />
-        ))}
+      {/* 🏷️ Moving welcome text */}
+      <div className="absolute bottom-0 left-0 w-full bg-black/60 py-2 overflow-hidden">
+        <motion.div
+          className="text-white text-lg font-semibold whitespace-nowrap"
+          animate={{ x: ["100%", "-100%"] }}
+          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+        >
+          Welcome to Hotel Dionyx — Experience Luxury & Comfort
+        </motion.div>
       </div>
     </div>
   );
