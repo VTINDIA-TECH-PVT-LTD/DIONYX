@@ -74,6 +74,7 @@ export default function Mianhome() {
           animate={{ x: ["100%", "-100%"] }}
           transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
         >
+
           ✨ Welcome to Hotel Dionyx — Where Luxury Meets Comfort ✨
         </motion.div>
       </div>
