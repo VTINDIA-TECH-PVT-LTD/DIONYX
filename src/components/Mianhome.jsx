@@ -68,12 +68,13 @@ export default function Mianhome() {
 
 
       {/* 🏷️ Moving welcome text */}
-      <div className="absolute bottom-0 left-0 w-full bg-black/70 py-2 overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-full bg-black/70 py-4 overflow-hidden">
         <motion.div
           className="text-white text-lg font-semibold whitespace-nowrap"
           animate={{ x: ["100%", "-100%"] }}
           transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
         >
+
           ✨ Welcome to Hotel Dionyx — Where Luxury Meets Comfort ✨
         </motion.div>
       </div>
