@@ -24,6 +24,10 @@ import Gallery from "./pages/Gallery";
 import ScrollToTopButton from "./components/ScrollToTopButton"; 
 import VideoSection from "./pages/VideoSection";
 
+import SkyKitchen from "./pages/SkyKitchen";
+import BanquetConference from "./pages/BanquetConference";
+import Activities from "./pages/Activities";
+
 function App() {
   return (
     <Router>
@@ -63,6 +67,9 @@ function App() {
         <Route path="facilities" element={<Facilities />} />
         {/* <Route path="/gallery" element={<Gallery />} /> */}
         <Route path="/video" element={<VideoSection />} />
+        <Route path="/facilities/sky-kitchen" element={<SkyKitchen />} />
+        <Route path="/facilities/banquet-conference" element={<BanquetConference />} />
+        <Route path="/facilities/activities" element={<Activities />} />
       </Routes>
       <Footer />
       <ScrollToTopButton />

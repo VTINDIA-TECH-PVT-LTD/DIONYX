@@ -47,20 +47,19 @@ const facilities = [
 
 const Facilities = () => {
   return (
-    <div className="bg-gradient-to-b from-white to-orange-50   ">
+    <div className="bg-gradient-to-b from-white to-orange-50 pb-10   ">
       {/* Page Title */}
-      <section className="text-center py-16 ">
-        <motion.h1
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-orange-800"
-           style={{ fontFamily: "'Playfair Display', serif" }}
-        >
-          Our Facilities
-        </motion.h1>
-        
-      </section>
+      <section className="text-center py-16 bg-orange-100">
+              <motion.h1
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-4xl md:text-5xl font-bold text-orange-800"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Our Facilities
+              </motion.h1>
+            </section>
       {/* <motion.h2
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -71,7 +70,7 @@ const Facilities = () => {
       </motion.h2> */}
 
       {/* Facilities Grid */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10  pt-5 ">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10  pt-10 px-6 md:px-12 max-w-7xl mx-auto">
         {facilities.map((facility, index) => (
           <motion.div
             key={index}

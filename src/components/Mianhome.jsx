@@ -39,13 +39,13 @@ export default function Mianhome() {
   }, []);
 
   return (
-    <div className="relative w-full h-[70vh] overflow-hidden">
+    <div className="relative w-full h-[70vh]  overflow-hidden">
       {/* 🎵 Background Music */}
       <audio ref={audioRef} src="/assets/dionyx-bg.mp3" preload="auto" />
 
       {/* 🎥 MP4 Video as Banner */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover mt-[-55px] "
         src="https://dionyx.in/images/Hotel%20Dionxy.mp4"
         autoPlay
         loop
@@ -54,26 +54,27 @@ export default function Mianhome() {
       />
 
       {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40  to-transparent" />
 
       {/* Title Text */}
       <motion.div
-        className="absolute bottom-10 left-6 text-white text-3xl font-bold"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Explore and Enjoy with Hotel Dionyx
-      </motion.div>
+  className="absolute bottom-20 left-6 text-white text-[20px] sm:text-3xl md:text-4xl font-bold"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  Explore and Enjoy with Hotel Dionyx
+</motion.div>
+
 
       {/* 🏷️ Moving welcome text */}
-      <div className="absolute bottom-0 left-0 w-full bg-black/60 py-2 overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-full bg-black/70 py-2 overflow-hidden">
         <motion.div
           className="text-white text-lg font-semibold whitespace-nowrap"
           animate={{ x: ["100%", "-100%"] }}
           transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
         >
-          Welcome to Hotel Dionyx — Experience Luxury & Comfort
+          ✨ Welcome to Hotel Dionyx — Where Luxury Meets Comfort ✨
         </motion.div>
       </div>
     </div>
