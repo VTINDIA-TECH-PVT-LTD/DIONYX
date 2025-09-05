@@ -30,70 +30,52 @@ const rooms = [
       "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
     price: "₹3,299 / night",
   },
-  
 ];
 
 const Accommodation = () => {
   return (
     <div className="bg-gradient-to-b from-white to-orange-50 min-h-96 overflow-hidden">
-      {/* Hero Section */}
-      <section
-        className="relative h-[30vh] flex items-center justify-center bg-fixed bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1600585154206-f3d3be726f88?w=1600&q=80')",
-        }}
-      >
-        <div className="absolute inset-0  bg-orange-100" />
-        
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative text-center text-white"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
-          <h1 className="text-5xl font-bold drop-shadow-lg text-orange-800">
-            Luxury Accommodation
-          </h1>
-          <p className="mt-4 text-lg opacity-90 text-gray-600 " style={{ fontFamily: "'Poppins', sans-serif" }}>
-            Experience unmatched comfort & hospitality at Dionyx
-          </p>
-        </motion.div>
-      </section>
+      {/* =========================
+          DEMO BANNER (replaces old "Luxury Accommodation" section)
+          ========================= */}
+      <section className="relative w-full">
+        <div className="relative h-[30vh] md:h-[35vh] lg:h-[35vh] w-full overflow-hidden">
+          {/* Place your demo banner image inside public/assets */}
+          <img
+            src="/assets/Accomodation.jpeg"
+            alt="Overview banner"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
 
-      {/* Sticky Booking Widget */}
-      {/* <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="max-w-5xl mx-auto -mt-16 relative z-20 bg-white rounded-2xl shadow-xl p-6 flex flex-col md:flex-row gap-4"
-      >
-        <div className="flex items-center gap-3 flex-1 border rounded-lg p-3">
-          <Calendar className="text-orange-500" />
-          <input
-            type="date"
-            className="w-full outline-none"
-            placeholder="Check-in Date"
-          />
+          {/* Centered Title + Breadcrumb */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+            <motion.h1
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Luxry Accommodation
+            </motion.h1>
+
+            <motion.nav
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.25 }}
+              className="mt-3 text-sm sm:text-base text-white/90 flex items-center gap-2"
+              aria-label="Breadcrumb"
+            >
+              <a href="/" className="text-orange-300 hover:underline">
+                Home
+              </a>
+              <span className="text-white/60">→</span>
+              <span>Accommodation</span>
+            </motion.nav>
+          </div>
         </div>
-        <div className="flex items-center gap-3 flex-1 border rounded-lg p-3">
-          <Users className="text-orange-500" />
-          <input
-            type="number"
-            className="w-full outline-none"
-            placeholder="Guests"
-          />
-        </div>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-orange-500 text-white px-6 py-3 rounded-xl shadow-md hover:bg-orange-600 transition-colors"
-        >
-          Check Availability
-        </motion.button>
-      </motion.div> */}
+      </section>
 
       {/* Rooms Showcase */}
       <section className="max-w-7xl mx-auto py-20 px-6">
@@ -117,7 +99,7 @@ const Accommodation = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="relative rounded-2xl overflow-hidden shadow-lg group"
             >
-              {/* Image with zoom hover */}
+              {/* Image */}
               <div className="overflow-hidden h-64">
                 <motion.img
                   whileHover={{ scale: 1.1 }}
@@ -127,7 +109,7 @@ const Accommodation = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* Overlay card */}
+              {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-6 text-white">
                 <h3 className="text-2xl font-semibold">{room.title}</h3>
                 <p className="text-sm mt-2">{room.description}</p>
@@ -160,16 +142,9 @@ const Accommodation = () => {
         <p className="opacity-90 mb-6">
           Book your stay today and make unforgettable memories at Dionyx Hotel.
         </p>
-        {/* <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-white text-orange-600 px-8 py-3 rounded-xl shadow-lg font-semibold"
-        >
-          Reserve Now
-        </motion.button> */}
       </section>
+
       <Uniqueness />
-      {/* <Footer /> */}
       <ScrollToTopButton />
     </div>
   );
