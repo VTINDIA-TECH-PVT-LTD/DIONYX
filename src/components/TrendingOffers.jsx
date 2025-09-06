@@ -8,21 +8,21 @@ const offers = [
     description:
       "Escape the city and enjoy a luxury weekend stay with complimentary spa access.",
     image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
+      "/assets/Resturant.jpeg",
   },
   {
     title: "Romantic Candlelight Dinner",
     description:
       "Experience a 5-course gourmet dinner under the stars with live music.",
     image:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80",
+      "/assets/Resturant.jpeg",
   },
   {
     title: "Adventure & Explore Package",
     description:
       "Guided tours, water sports, and hiking adventures all in one exciting package.",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+      "/assets/Resturant.jpeg",
   },
 ];
 
