@@ -2,7 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
-import Footer from "../components/Footer";
 import ScrollToTopButton from "./ScrollToTopButton";
 
 const Contact = () => {
@@ -143,7 +142,7 @@ const Contact = () => {
       </section>
 
       <ScrollToTopButton />
-      <Footer />
+      
     </div>
   );
 };

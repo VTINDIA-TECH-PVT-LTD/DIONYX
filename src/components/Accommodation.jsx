@@ -11,7 +11,7 @@ const rooms = [
     title: "Deluxe King Room",
     description: "Elegant comfort with king-sized bed, balcony, and city views.",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+      "/assets/Room.jpg",
     price: "₹1,999 / night",
   },
   {
@@ -19,7 +19,7 @@ const rooms = [
     description:
       "Spacious suite with a private lounge, luxury bathroom & modern amenities.",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+      "/assets/Room.jpg",
     price: "₹2,499 / night",
   },
   {
@@ -27,7 +27,7 @@ const rooms = [
     description:
       "Perfect for families with extra space, cozy beds & warm interiors.",
     image:
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
+      "/assets/Room.jpg",
     price: "₹3,299 / night",
   },
 ];

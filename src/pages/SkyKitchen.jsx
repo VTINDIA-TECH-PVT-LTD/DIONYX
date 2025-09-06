@@ -6,17 +6,17 @@ import { motion } from "framer-motion";
 const demoItems = [
   {
     title: "Rooftop Dining",
-    image: "https://source.unsplash.com/800x600/?rooftop,dining",
+    image: "/assets/Resturant.jpeg",
     desc: "Experience fine dining under the stars with breathtaking city views.",
   },
   {
     title: "Live Music Nights",
-    image: "https://source.unsplash.com/800x600/?music,restaurant",
+    image: "/assets/Accomodation.jpeg",
     desc: "Enjoy soulful live performances while savoring your favorite dishes.",
   },
   {
     title: "Signature Cocktails",
-    image: "https://source.unsplash.com/800x600/?cocktail,bar",
+    image: "/assets/Banner.jpg",
     desc: "Taste our handcrafted cocktails curated by expert mixologists.",
   },
 ];
